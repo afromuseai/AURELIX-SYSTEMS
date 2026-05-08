@@ -54,6 +54,8 @@ export function HeroSection() {
           <span className="text-gold-gradient">Building</span>
           <br />
           <span className="text-foreground">Intelligent Systems</span>
+          <br />
+          <span className="text-gold/80">For a Better Future</span>
         </motion.h1>
 
         {/* Subheading */}
