@@ -20,7 +20,7 @@ function Router() {
   const [location] = useLocation();
 
   return (
-    <AnimatePresence mode="wait" initial={false}>
+    <AnimatePresence mode="wait">
       <motion.div
         key={location}
         variants={pageVariants}
