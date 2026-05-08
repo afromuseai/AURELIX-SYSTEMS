@@ -9,7 +9,7 @@ const team = [
   {
     name: 'Joshua Ametefe',
     role: 'Founder & CEO',
-    bio: 'Visionary technologist driving the future of AI systems.',
+    bio: 'Founder of AURELIX SYSTEMS, building intelligent platforms across creativity, finance, and cybersecurity.',
     image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-06%20at%2020.50.15-4o0HwutbOStb8OF5g8KARTLuXRZHNx.jpeg',
     initial: 'JA'
   },
