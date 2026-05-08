@@ -14,18 +14,18 @@ const team = [
     initial: 'JA'
   },
   {
-    name: 'Director',
+    name: 'Elena Müller',
     role: 'Director of Operations',
     bio: 'Strategic leader overseeing company growth and partnerships.',
-    image: null,
-    initial: 'D'
+    image: '/images/team/director-of-operations.jpg',
+    initial: 'EM'
   },
   {
-    name: 'Lead Engineer',
+    name: 'Kenji Tanaka',
     role: 'Head of Engineering',
     bio: 'Building the technical foundation for our AI products.',
-    image: null,
-    initial: 'E'
+    image: '/images/team/head-of-engineering.jpg',
+    initial: 'KT'
   },
   {
     name: 'Michael Kumi',
