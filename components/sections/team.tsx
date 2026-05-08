@@ -7,7 +7,7 @@ import { Linkedin, Twitter } from 'lucide-react'
 
 const team = [
   {
-    name: 'Joshua Adegoke',
+    name: 'Joshua Ametefe',
     role: 'Founder & CEO',
     bio: 'Visionary technologist driving the future of AI systems.',
     image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-06%20at%2020.50.15-4o0HwutbOStb8OF5g8KARTLuXRZHNx.jpeg',
@@ -28,11 +28,11 @@ const team = [
     initial: 'E'
   },
   {
-    name: 'AI Researcher',
+    name: 'Michael Kumi',
     role: 'Principal AI Researcher',
     bio: 'Pushing the boundaries of machine learning innovation.',
     image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-n4AHDIFtl1wvX5owcv0cO8ogAe61eI.png',
-    initial: 'R'
+    initial: 'MK'
   }
 ]
 
