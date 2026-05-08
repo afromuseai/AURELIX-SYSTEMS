@@ -1,0 +1,27 @@
+kind = "mobile"
+previewPath = "/aurelix-mobile/"
+title = "AURELIX Mobile"
+version = "1.0.0"
+id = "artifacts/aurelix-mobile"
+router = "expo-domain"
+
+[[integratedSkills]]
+name = "expo"
+version = "1.0.0"
+
+[[services]]
+ensurePreviewReachable = "/status"
+name = "expo"
+paths = [ "/aurelix-mobile/" ]
+localPort = 21758
+
+[services.development]
+run = "pnpm --filter @workspace/aurelix-mobile run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/aurelix-mobile", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/aurelix-mobile", "run", "serve" ]
+
+[services.env]
+PORT = "21758"
+BASE_PATH = "/aurelix-mobile/"
