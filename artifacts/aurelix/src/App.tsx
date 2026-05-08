@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import { Switch, Route, Router as WouterRouter, useLocation } from "wouter";
 import { AnimatePresence, motion } from "framer-motion";
 import NotFound from "@/pages/not-found";
@@ -11,7 +11,7 @@ import { pageVariants, pageTransition } from "@/lib/page-transition";
 function Router() {
   const [location] = useLocation();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
 
