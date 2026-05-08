@@ -5,17 +5,7 @@ import HomePage from "@/pages/home";
 import AfroMusePage from "@/pages/afromuse";
 import GTProPage from "@/pages/gtpro";
 import { ProgressBar } from "@/components/ui/progress-bar";
-
-const pageVariants = {
-  initial: { opacity: 0, y: 18 },
-  animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -12 },
-};
-
-const pageTransition = {
-  duration: 0.32,
-  ease: [0.25, 0.46, 0.45, 0.94] as const,
-};
+import { pageVariants, pageTransition } from "@/lib/page-transition";
 
 function Router() {
   const [location] = useLocation();

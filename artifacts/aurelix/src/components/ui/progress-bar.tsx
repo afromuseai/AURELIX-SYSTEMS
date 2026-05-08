@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { useLocation } from 'wouter'
+import { PAGE_TRANSITION_DURATION_MS } from '@/lib/page-transition'
 
 export function ProgressBar() {
   const [location] = useLocation()
@@ -20,7 +21,8 @@ export function ProgressBar() {
     setVisible(true)
 
     let start: number | null = null
-    const totalDuration = 700
+    // Exit + enter transition: 2 × PAGE_TRANSITION_DURATION_MS
+    const totalDuration = PAGE_TRANSITION_DURATION_MS * 2
 
     const tick = (timestamp: number) => {
       if (!start) start = timestamp
