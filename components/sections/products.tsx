@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { SectionReveal, StaggerContainer, StaggerItem } from '@/components/animations/section-reveal'
 import { HoverCard } from '@/components/animations/floating-elements'
 import { Music, TrendingUp, Building2, Shield, ArrowUpRight } from 'lucide-react'
@@ -23,6 +24,7 @@ const products = [
     tagline: 'Global Trade Intelligence',
     description: 'An advanced AI-powered trading intelligence platform engineered for real-time market analysis and autonomous execution through intelligent bot fleets and predictive strategy systems.',
     icon: TrendingUp,
+    logo: '/images/logos/gtpro-logo.png',
     href: '/gtpro',
     gradient: 'from-emerald-500/20 via-green-500/10 to-transparent',
     features: ['AI-Driven Trading Systems', 'Autonomous Execution Bots', 'Real-Time Market Intelligence', 'Strategy Optimization']
@@ -89,12 +91,25 @@ export function ProductsSection() {
                       {/* Icon & Title */}
                       <div className="flex items-start justify-between mb-6">
                         <div>
-                          <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gold/10 text-gold mb-4 group-hover:glow-gold-sm transition-all duration-500">
-                            <product.icon size={24} />
-                          </div>
-                          <h3 className="font-display text-xl tracking-wider text-foreground mb-1">
-                            {product.name}
-                          </h3>
+                          {'logo' in product && product.logo ? (
+                            <div className="relative w-48 h-16 mb-4">
+                              <Image
+                                src={product.logo}
+                                alt={`${product.name} logo`}
+                                fill
+                                className="object-contain object-left"
+                              />
+                            </div>
+                          ) : (
+                            <>
+                              <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gold/10 text-gold mb-4 group-hover:glow-gold-sm transition-all duration-500">
+                                <product.icon size={24} />
+                              </div>
+                              <h3 className="font-display text-xl tracking-wider text-foreground mb-1">
+                                {product.name}
+                              </h3>
+                            </>
+                          )}
                           <p className="text-sm text-gold/80">{product.tagline}</p>
                         </div>
                         <ArrowUpRight 
