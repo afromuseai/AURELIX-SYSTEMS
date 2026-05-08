@@ -61,11 +61,11 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed"
+          className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed"
         >
-          AI-powered infrastructure for creativity, business, finance, and security.
+          AI-powered infrastructure for creativity, finance, business growth, and cybersecurity.
           <br className="hidden sm:block" />
-          <span className="text-gold/80">For a better future.</span>
+          <span className="text-foreground/80">AURELIX SYSTEMS develops next-generation AI platforms designed to empower creators, automate enterprises, strengthen digital ecosystems, and unlock scalable intelligence for the future.</span>
         </motion.p>
 
         {/* CTA Buttons */}
@@ -87,7 +87,7 @@ export function HeroSection() {
             href="#contact"
             className="flex items-center gap-2 px-8 py-4 bg-transparent text-foreground font-medium rounded-sm border border-gold/30 hover:border-gold/60 hover:bg-gold/5 transition-all duration-300"
           >
-            Join Waitlist
+            Join the Future
           </Link>
         </motion.div>
 

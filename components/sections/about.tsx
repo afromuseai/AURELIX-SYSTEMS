@@ -8,23 +8,23 @@ import { Target, Globe, Lightbulb, Rocket } from 'lucide-react'
 const values = [
   {
     icon: Target,
-    title: 'Vision',
-    description: 'Building next-generation AI infrastructure that empowers creators, businesses, and institutions worldwide.'
+    title: 'Mission',
+    description: 'Building intelligent systems that empower creativity, accelerate business growth, strengthen digital security, and redefine human-technology interaction.'
   },
   {
     icon: Globe,
-    title: 'Global Impact',
-    description: 'Focused on Africa and global innovation, bringing world-class AI solutions to emerging markets.'
+    title: 'Vision',
+    description: 'Becoming a global leader in intelligent infrastructure by building advanced AI ecosystems that shape the future of creativity, finance, and cybersecurity.'
   },
   {
     icon: Lightbulb,
     title: 'Innovation',
-    description: 'Pioneering breakthrough technologies in machine learning, automation, and intelligent systems.'
+    description: 'Developing AI-powered infrastructure that transforms ideas into scalable systems, combining automation, intelligence, and innovation into unified experiences.'
   },
   {
     icon: Rocket,
-    title: 'Excellence',
-    description: 'Committed to delivering enterprise-grade products that set new standards in the industry.'
+    title: 'Future',
+    description: 'Technology that will not simply assist people — it will collaborate, adapt, and evolve alongside them.'
   }
 ]
 
@@ -58,14 +58,14 @@ export function AboutSection() {
 
             <SectionReveal delay={0.2}>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                AURELIX SYSTEMS is at the forefront of artificial intelligence innovation. 
-                We build intelligent products that transform industries across creativity, 
-                finance, business infrastructure, and cybersecurity.
+                AURELIX SYSTEMS exists to build intelligent systems that empower creativity, 
+                accelerate business growth, strengthen digital security, and redefine how 
+                humans interact with technology.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Our mission is to democratize access to powerful AI tools, with a special 
-                focus on emerging markets and global innovation. We believe in building 
-                technology that creates real value for people and businesses everywhere.
+                We develop AI-powered infrastructure designed to transform ideas into scalable 
+                systems across multiple industries, combining automation, intelligence, and 
+                innovation into unified digital experiences.
               </p>
             </SectionReveal>
 
