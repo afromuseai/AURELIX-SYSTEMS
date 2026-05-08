@@ -16,11 +16,11 @@ export function HeroSection() {
           src="/images/hero-bg.png"
           alt=""
           fill
-          className="object-cover object-center opacity-15"
+          className="object-cover object-center opacity-30"
           priority
         />
         {/* Gradient overlay from bottom */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
       </div>
 
       {/* Background Grid */}
@@ -67,9 +67,15 @@ export function HeroSection() {
           <span className="text-gold-gradient">Building</span>
           <br />
           <span className="text-foreground">Intelligent Systems</span>
-          <br />
-          <span className="text-gold/80">For a Better Future</span>
         </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-sm sm:text-base tracking-[0.3em] text-gold/70 uppercase mt-2 mb-4"
+        >
+          For a Better Future
+        </motion.p>
 
         {/* Subheading */}
         <motion.p
