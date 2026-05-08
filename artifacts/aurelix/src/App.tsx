@@ -4,6 +4,7 @@ import NotFound from "@/pages/not-found";
 import HomePage from "@/pages/home";
 import AfroMusePage from "@/pages/afromuse";
 import GTProPage from "@/pages/gtpro";
+import { ProgressBar } from "@/components/ui/progress-bar";
 
 const pageVariants = {
   initial: { opacity: 0, y: 18 },
@@ -43,6 +44,7 @@ function Router() {
 function App() {
   return (
     <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+      <ProgressBar />
       <Router />
     </WouterRouter>
   );
