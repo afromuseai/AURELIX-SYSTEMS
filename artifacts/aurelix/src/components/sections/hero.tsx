@@ -10,17 +10,6 @@ import { ArrowRight, Sparkles } from 'lucide-react'
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <img
-          src="/images/hero-bg.png"
-          alt=""
-          className="w-full h-full object-cover object-center opacity-30"
-        />
-        {/* Gradient overlay from bottom */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
-      </div>
-
       {/* Background Grid */}
       <div className="absolute inset-0 bg-grid opacity-30" />
       
