@@ -6,6 +6,7 @@ import { AboutSection } from '@/components/sections/about'
 import { ResearchSection } from '@/components/sections/research'
 import { TeamSection } from '@/components/sections/team'
 import { FounderSection } from '@/components/sections/founder'
+import { ManifestoSection } from '@/components/sections/manifesto'
 import { ContactSection } from '@/components/sections/contact'
 
 export default function HomePage() {
@@ -18,6 +19,7 @@ export default function HomePage() {
       <ResearchSection />
       <TeamSection />
       <FounderSection />
+      <ManifestoSection />
       <ContactSection />
       <Footer />
     </main>

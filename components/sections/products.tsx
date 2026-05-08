@@ -10,42 +10,42 @@ const products = [
   {
     id: 'afromuse',
     name: 'AfroMuse AI',
-    tagline: 'The Future of Music Creation',
-    description: 'An AI-powered music workflow platform for artists and producers. From song ideas to lyrics, blueprint generation, and AI audio production.',
+    tagline: 'AI-Powered Creative Intelligence',
+    description: 'An intelligent music workflow platform designed for artists, producers, and creators. From song ideation and lyrical generation to blueprint development and AI-powered audio production.',
     icon: Music,
     href: '/afromuse',
     gradient: 'from-amber-500/20 via-orange-500/10 to-transparent',
-    features: ['AI Lyrics Generation', 'Song Blueprints', 'Audio Production', 'Artist Tools']
+    features: ['AI Lyrics Generation', 'Song Blueprint Creation', 'Audio Concept Development', 'Producer Workflow Assistance']
   },
   {
     id: 'gtpro',
     name: 'GTPro',
-    tagline: 'Institutional Trading Intelligence',
-    description: 'Global Trade Intelligence platform with AI-powered trading systems and bot fleets executing real-time market strategies.',
+    tagline: 'Global Trade Intelligence',
+    description: 'An advanced AI-powered trading intelligence platform engineered for real-time market analysis and autonomous execution through intelligent bot fleets and predictive strategy systems.',
     icon: TrendingUp,
     href: '/gtpro',
     gradient: 'from-emerald-500/20 via-green-500/10 to-transparent',
-    features: ['AI Trading Bots', 'Market Analytics', 'Strategy Execution', 'Risk Management']
+    features: ['AI-Driven Trading Systems', 'Autonomous Execution Bots', 'Real-Time Market Intelligence', 'Strategy Optimization']
   },
   {
     id: 'stageone',
     name: 'STAGEONE',
-    tagline: 'AI Business Infrastructure',
-    description: 'An AI business infrastructure platform helping companies scale with website generation, chatbot systems, growth intelligence, and automation tools.',
+    tagline: 'Business Infrastructure Intelligence',
+    description: 'An AI-powered business acceleration platform designed to help startups and enterprises scale intelligently with growth strategy systems, website generation, and automation architecture.',
     icon: Building2,
     href: '#',
     gradient: 'from-blue-500/20 via-cyan-500/10 to-transparent',
-    features: ['Website Generation', 'Chatbot Systems', 'Growth Analytics', 'Automation']
+    features: ['AI Growth Intelligence', 'Website Generation Systems', 'Business Automation Workflows', 'Intelligent Chatbot Infrastructure']
   },
   {
     id: 'cyber',
-    name: 'Cyber Intelligence',
-    tagline: 'Autonomous System Protection',
-    description: 'AI-powered cybersecurity intelligence and autonomous system protection for apps, systems, and websites.',
+    name: 'AURELIX Cyber Intelligence',
+    tagline: 'Autonomous Security Systems',
+    description: 'A next-generation cybersecurity platform focused on AI-powered digital defense, autonomous threat monitoring, and intelligent infrastructure protection for applications and enterprise environments.',
     icon: Shield,
     href: '#',
     gradient: 'from-red-500/20 via-rose-500/10 to-transparent',
-    features: ['Threat Detection', 'Auto Response', 'System Analysis', 'Vulnerability Scanning']
+    features: ['AI Threat Detection', 'Autonomous Security Monitoring', 'System Vulnerability Intelligence', 'Adaptive Cyber Defense']
   }
 ]
 

@@ -6,40 +6,40 @@ import { Brain, Workflow, Bot, Network, Cpu, Database } from 'lucide-react'
 
 const researchAreas = [
   {
-    icon: Workflow,
-    title: 'AI Workflows',
-    description: 'Designing intelligent automation pipelines that streamline complex multi-step processes.',
-    status: 'Active'
-  },
-  {
     icon: Bot,
-    title: 'Agent Systems',
-    description: 'Developing autonomous AI agents capable of independent decision-making and task execution.',
+    title: 'Autonomous AI Agents',
+    description: 'Developing adaptive AI systems capable of executing complex workflows, assisting decision-making, and operating across interconnected digital environments.',
     status: 'Active'
   },
   {
     icon: Network,
-    title: 'Neural Architecture',
-    description: 'Exploring novel neural network architectures for improved efficiency and performance.',
-    status: 'Research'
-  },
-  {
-    icon: Cpu,
-    title: 'Automation Pipelines',
-    description: 'Building scalable infrastructure for automated data processing and model deployment.',
+    title: 'Intelligence Infrastructure',
+    description: 'Building scalable AI frameworks that power business systems, trading intelligence, creative platforms, and secure digital ecosystems.',
     status: 'Active'
   },
   {
     icon: Brain,
-    title: 'Intelligence Systems',
-    description: 'Creating adaptive systems that learn and evolve based on real-world interactions.',
+    title: 'Creative Computation',
+    description: 'Exploring AI-powered creative workflows for music, media, storytelling, and next-generation digital production systems.',
     status: 'Research'
   },
   {
-    icon: Database,
-    title: 'Data Infrastructure',
-    description: 'Architecting robust data systems for training and deploying AI at scale.',
+    icon: Cpu,
+    title: 'Cybersecurity Intelligence',
+    description: 'Designing intelligent threat detection systems and autonomous security architectures capable of protecting evolving digital infrastructures.',
     status: 'Active'
+  },
+  {
+    icon: Workflow,
+    title: 'Enterprise Automation',
+    description: 'Researching AI-assisted business scaling systems, workflow automation, and intelligent operational frameworks for modern organizations.',
+    status: 'Active'
+  },
+  {
+    icon: Database,
+    title: 'Systems Engineering',
+    description: 'Through continuous experimentation and systems engineering, developing scalable technologies designed to shape the future of digital interaction.',
+    status: 'Research'
   }
 ]
 
@@ -53,13 +53,16 @@ export function ResearchSection() {
         {/* Section Header */}
         <SectionReveal className="text-center mb-20">
           <span className="inline-block px-4 py-1.5 text-xs font-medium tracking-[0.2em] text-gold bg-gold/10 rounded-full border border-gold/20 mb-6">
-            RESEARCH
+            AURELIX LABS
           </span>
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl tracking-wider mb-6">
-            Pioneering <span className="text-gold-gradient">AI Research</span>
+            Intelligent Research & <span className="text-gold-gradient">Systems Development</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Our research teams are pushing the boundaries of what&apos;s possible with artificial intelligence.
+          <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-4">
+            AURELIX LABS is the research and innovation division of AURELIX SYSTEMS, focused on designing next-generation AI architectures, autonomous systems, and intelligent digital infrastructure.
+          </p>
+          <p className="text-sm text-gold/70 max-w-xl mx-auto">
+            We believe the future of technology lies in systems that are adaptive, scalable, collaborative, autonomous, and human-centered.
           </p>
         </SectionReveal>
 
