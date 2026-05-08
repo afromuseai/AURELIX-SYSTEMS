@@ -14,6 +14,7 @@ const products = [
     tagline: 'AI-Powered Creative Intelligence',
     description: 'An intelligent music workflow platform designed for artists, producers, and creators. From song ideation and lyrical generation to blueprint development and AI-powered audio production.',
     icon: Music,
+    logo: '/images/logos/afromuse-logo.jpg',
     href: '/afromuse',
     gradient: 'from-amber-500/20 via-orange-500/10 to-transparent',
     features: ['AI Lyrics Generation', 'Song Blueprint Creation', 'Audio Concept Development', 'Producer Workflow Assistance']
@@ -92,13 +93,20 @@ export function ProductsSection() {
                       <div className="flex items-start justify-between mb-6">
                         <div>
                           {'logo' in product && product.logo ? (
-                            <div className="relative w-48 h-16 mb-4">
-                              <Image
-                                src={product.logo}
-                                alt={`${product.name} logo`}
-                                fill
-                                className="object-contain object-left"
-                              />
+                            <div className="flex items-center gap-3 mb-4">
+                              <div className={`relative ${product.id === 'gtpro' ? 'w-48 h-16' : 'w-14 h-14'}`}>
+                                <Image
+                                  src={product.logo}
+                                  alt={`${product.name} logo`}
+                                  fill
+                                  className={`object-contain ${product.id === 'gtpro' ? 'object-left' : 'rounded-lg'}`}
+                                />
+                              </div>
+                              {product.id !== 'gtpro' && (
+                                <h3 className="font-display text-xl tracking-wider text-foreground">
+                                  {product.name}
+                                </h3>
+                              )}
                             </div>
                           ) : (
                             <>
