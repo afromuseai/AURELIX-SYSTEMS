@@ -454,22 +454,17 @@ function AudioSection() {
               Our AI handles beats, melodies, and professional mixing.
             </p>
 
-            <div className="grid grid-cols-2 gap-4">
-              {features.map((feature, i) => (
-                <motion.div
-                  key={feature.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="p-4 bg-secondary/30 rounded-lg"
-                >
-                  <feature.icon size={20} className="text-amber-400 mb-2" />
-                  <h4 className="text-sm font-medium text-foreground">{feature.title}</h4>
-                  <p className="text-xs text-muted-foreground">{feature.desc}</p>
-                </motion.div>
+            <StaggerContainer className="grid grid-cols-2 gap-4">
+              {features.map((feature) => (
+                <StaggerItem key={feature.title}>
+                  <div className="p-4 bg-secondary/30 rounded-lg">
+                    <feature.icon size={20} className="text-amber-400 mb-2" />
+                    <h4 className="text-sm font-medium text-foreground">{feature.title}</h4>
+                    <p className="text-xs text-muted-foreground">{feature.desc}</p>
+                  </div>
+                </StaggerItem>
               ))}
-            </div>
+            </StaggerContainer>
           </SectionReveal>
         </div>
       </div>
@@ -528,9 +523,9 @@ function ProductShowcaseSection() {
             </div>
           </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {screenshots.map((screenshot, i) => (
-              <FadeIn key={screenshot.title} delay={i * 0.1}>
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {screenshots.map((screenshot) => (
+              <StaggerItem key={screenshot.title}>
                 <motion.div
                   whileHover={{ y: -4 }}
                   className="group relative rounded-xl overflow-hidden border border-amber-500/20 hover:border-amber-500/40 transition-all"
@@ -547,12 +542,12 @@ function ProductShowcaseSection() {
                     </div>
                   </div>
                 </motion.div>
-              </FadeIn>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <FadeIn delay={0.2}>
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <StaggerItem>
               <div className="relative rounded-xl overflow-hidden border border-amber-500/20">
                 <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-pVQpeTPcBb9WIbvetE6irXyGgGqz3N.png"
@@ -560,8 +555,8 @@ function ProductShowcaseSection() {
                   className="w-full h-auto"
                 />
               </div>
-            </FadeIn>
-            <FadeIn delay={0.3}>
+            </StaggerItem>
+            <StaggerItem>
               <div className="relative rounded-xl overflow-hidden border border-amber-500/20">
                 <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-AvYldAuN19GGOYGxv2ysLnnHesGesX.png"
@@ -569,8 +564,8 @@ function ProductShowcaseSection() {
                   className="w-full h-auto"
                 />
               </div>
-            </FadeIn>
-          </div>
+            </StaggerItem>
+          </StaggerContainer>
         </div>
       </div>
     </section>

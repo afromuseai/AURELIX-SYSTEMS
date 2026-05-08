@@ -2,7 +2,7 @@
 
 
 import { motion } from 'framer-motion'
-import { SectionReveal, FadeIn } from '@/components/animations/section-reveal'
+import { SectionReveal, StaggerContainer, StaggerItem } from '@/components/animations/section-reveal'
 import { Target, Globe, Lightbulb, Rocket } from 'lucide-react'
 
 const values = [
@@ -98,9 +98,9 @@ export function AboutSection() {
           </div>
 
           {/* Right - Values Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {values.map((value, index) => (
-              <FadeIn key={value.title} delay={index * 0.1}>
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {values.map((value) => (
+              <StaggerItem key={value.title}>
                 <motion.div
                   whileHover={{ y: -4 }}
                   className="p-6 glass-card rounded-lg group hover:border-gold/30 transition-all duration-500"
@@ -115,9 +115,9 @@ export function AboutSection() {
                     {value.description}
                   </p>
                 </motion.div>
-              </FadeIn>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </div>
     </section>

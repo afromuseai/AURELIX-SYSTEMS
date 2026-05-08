@@ -286,22 +286,17 @@ function AITradingSection() {
               and executing strategies that human traders simply cannot match.
             </p>
 
-            <div className="grid grid-cols-2 gap-4">
-              {features.map((feature, i) => (
-                <motion.div
-                  key={feature.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="p-4 bg-secondary/30 rounded-lg"
-                >
-                  <feature.icon size={20} className="text-emerald-400 mb-2" />
-                  <h4 className="text-sm font-medium text-foreground">{feature.title}</h4>
-                  <p className="text-xs text-muted-foreground">{feature.desc}</p>
-                </motion.div>
+            <StaggerContainer className="grid grid-cols-2 gap-4">
+              {features.map((feature) => (
+                <StaggerItem key={feature.title}>
+                  <div className="p-4 bg-secondary/30 rounded-lg">
+                    <feature.icon size={20} className="text-emerald-400 mb-2" />
+                    <h4 className="text-sm font-medium text-foreground">{feature.title}</h4>
+                    <p className="text-xs text-muted-foreground">{feature.desc}</p>
+                  </div>
+                </StaggerItem>
               ))}
-            </div>
+            </StaggerContainer>
           </SectionReveal>
 
           <FadeIn delay={0.3}>
@@ -336,9 +331,9 @@ function BotFleetsSection() {
           </p>
         </SectionReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {bots.map((bot, i) => (
-            <FadeIn key={bot.name} delay={i * 0.1}>
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {bots.map((bot) => (
+            <StaggerItem key={bot.name}>
               <motion.div
                 whileHover={{ y: -4, borderColor: 'rgba(52, 211, 153, 0.3)' }}
                 className="p-6 glass-card rounded-lg transition-all duration-500"
@@ -373,9 +368,9 @@ function BotFleetsSection() {
                   </div>
                 </div>
               </motion.div>
-            </FadeIn>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   )
@@ -548,26 +543,21 @@ function PredictiveSection() {
               alternative data to generate predictive signals with institutional-grade accuracy.
             </p>
 
-            <div className="grid grid-cols-2 gap-4">
+            <StaggerContainer className="grid grid-cols-2 gap-4">
               {[
                 { label: 'Signal Accuracy', value: '94.7%' },
                 { label: 'Avg. Hold Time', value: '4.2hrs' },
                 { label: 'Win Rate', value: '67.3%' },
                 { label: 'Profit Factor', value: '2.84' },
-              ].map((stat, i) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="p-4 bg-secondary/30 rounded-lg"
-                >
-                  <p className="text-xs text-muted-foreground mb-1">{stat.label}</p>
-                  <p className="text-2xl font-mono text-emerald-400">{stat.value}</p>
-                </motion.div>
+              ].map((stat) => (
+                <StaggerItem key={stat.label}>
+                  <div className="p-4 bg-secondary/30 rounded-lg">
+                    <p className="text-xs text-muted-foreground mb-1">{stat.label}</p>
+                    <p className="text-2xl font-mono text-emerald-400">{stat.value}</p>
+                  </div>
+                </StaggerItem>
               ))}
-            </div>
+            </StaggerContainer>
           </SectionReveal>
 
           <FadeIn delay={0.3}>
