@@ -1,20 +1,25 @@
-// Export your models here. Add one export per file
-// export * from "./posts";
-//
-// Each model/table should ideally be split into different files.
-// Each model/table should define a Drizzle table, insert schema, and types:
-//
-//   import { pgTable, text, serial } from "drizzle-orm/pg-core";
-//   import { createInsertSchema } from "drizzle-zod";
-//   import { z } from "zod/v4";
-//
-//   export const postsTable = pgTable("posts", {
-//     id: serial("id").primaryKey(),
-//     title: text("title").notNull(),
-//   });
-//
-//   export const insertPostSchema = createInsertSchema(postsTable).omit({ id: true });
-//   export type InsertPost = z.infer<typeof insertPostSchema>;
-//   export type Post = typeof postsTable.$inferSelect;
+import { pgTable, serial, text, timestamp } from "drizzle-orm/pg-core";
+import { createInsertSchema, createSelectSchema } from "drizzle-zod";
+import { z } from "zod/v4";
 
-export {}
+export const LEAD_SOURCES = ["contact", "afromuse", "gtpro"] as const;
+export type LeadSource = (typeof LEAD_SOURCES)[number];
+
+export const leadsTable = pgTable("leads", {
+  id: serial("id").primaryKey(),
+  email: text("email").notNull(),
+  source: text("source").notNull(),
+  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+});
+
+export const insertLeadSchema = createInsertSchema(leadsTable)
+  .omit({ id: true, createdAt: true })
+  .extend({
+    email: z.string().email(),
+    source: z.enum(LEAD_SOURCES),
+  });
+
+export const selectLeadSchema = createSelectSchema(leadsTable);
+
+export type InsertLead = z.infer<typeof insertLeadSchema>;
+export type Lead = typeof leadsTable.$inferSelect;

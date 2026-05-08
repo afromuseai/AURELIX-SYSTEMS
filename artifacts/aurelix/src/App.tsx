@@ -7,6 +7,7 @@ import AfroMusePage from "@/pages/afromuse";
 import GTProPage from "@/pages/gtpro";
 import { ProgressBar } from "@/components/ui/progress-bar";
 import { pageVariants, pageTransition } from "@/lib/page-transition";
+import AdminLeadsPage from "@/pages/admin-leads";
 
 function Router() {
   const [location] = useLocation();
@@ -29,6 +30,7 @@ function Router() {
           <Route path="/" component={HomePage} />
           <Route path="/afromuse" component={AfroMusePage} />
           <Route path="/gtpro" component={GTProPage} />
+          <Route path="/admin/leads" component={AdminLeadsPage} />
           <Route component={NotFound} />
         </Switch>
       </motion.div>

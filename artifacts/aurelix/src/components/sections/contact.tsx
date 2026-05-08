@@ -10,15 +10,26 @@ export function ContactSection() {
   const [email, setEmail] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-    setEmail('')
+    setError(null)
+    try {
+      const res = await fetch(`${import.meta.env.BASE_URL}api/leads`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, source: 'contact' }),
+      })
+      if (!res.ok) throw new Error('Submission failed')
+      setIsSubmitted(true)
+      setEmail('')
+    } catch {
+      setError('Something went wrong. Please try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -125,6 +136,9 @@ export function ContactSection() {
                       className="w-full px-4 py-3 bg-secondary/50 border border-border rounded-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-gold/50 transition-colors"
                     />
                   </div>
+                  {error && (
+                    <p className="text-xs text-red-400">{error}</p>
+                  )}
                   <motion.button
                     type="submit"
                     disabled={isSubmitting}

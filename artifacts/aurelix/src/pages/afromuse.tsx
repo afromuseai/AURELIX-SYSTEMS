@@ -702,12 +702,28 @@ function CollaborationSection() {
 
 function WaitlistSection() {
   const [email, setEmail] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setIsSubmitted(true)
-    setEmail('')
+    setIsSubmitting(true)
+    setError(null)
+    try {
+      const res = await fetch(`${import.meta.env.BASE_URL}api/leads`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, source: 'afromuse' }),
+      })
+      if (!res.ok) throw new Error('Submission failed')
+      setIsSubmitted(true)
+      setEmail('')
+    } catch {
+      setError('Something went wrong. Please try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -742,25 +758,29 @@ function WaitlistSection() {
               <p className="text-muted-foreground">We&apos;ll notify you when AfroMuse AI launches.</p>
             </motion.div>
           ) : (
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                required
-                className="flex-1 px-4 py-3 bg-secondary/50 border border-border rounded-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-amber-500/50 transition-colors"
-              />
-              <motion.button
-                type="submit"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="px-6 py-3 bg-gold text-background font-medium rounded-sm hover:bg-gold-light transition-all flex items-center justify-center gap-2"
-              >
-                <Send size={18} />
-                Join
-              </motion.button>
-            </form>
+            <div className="flex flex-col items-center gap-3 max-w-md mx-auto">
+              <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 w-full">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  required
+                  className="flex-1 px-4 py-3 bg-secondary/50 border border-border rounded-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-amber-500/50 transition-colors"
+                />
+                <motion.button
+                  type="submit"
+                  disabled={isSubmitting}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="px-6 py-3 bg-gold text-background font-medium rounded-sm hover:bg-gold-light disabled:opacity-50 transition-all flex items-center justify-center gap-2"
+                >
+                  <Send size={18} />
+                  {isSubmitting ? 'Joining...' : 'Join'}
+                </motion.button>
+              </form>
+              {error && <p className="text-xs text-red-400">{error}</p>}
+            </div>
           )}
         </SectionReveal>
       </div>
