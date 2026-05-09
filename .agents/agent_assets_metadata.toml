@@ -1,0 +1,14 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "9P-J8Bzda-db-qtblB1kI"
+uri = "file://artifacts/aurelix-mobile/assets/images/icon.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "JJT2IXeWO_GnVoKVNxlP9"
+uri = "file://artifacts/aurelix-mobile/assets/images/splash-icon.png"
+type = "image"
+title = "generated_image"
