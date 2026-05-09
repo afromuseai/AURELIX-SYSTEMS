@@ -1,26 +1,18 @@
-import { Navigation } from '@/components/layout/navigation'
-import { Footer } from '@/components/layout/footer'
-import { HeroSection } from '@/components/sections/hero'
-import { ProductsSection } from '@/components/sections/products'
-import { AboutSection } from '@/components/sections/about'
-import { ResearchSection } from '@/components/sections/research'
-import { TeamSection } from '@/components/sections/team'
-import { FounderSection } from '@/components/sections/founder'
-import { ManifestoSection } from '@/components/sections/manifesto'
-import { ContactSection } from '@/components/sections/contact'
+import { Navbar } from "@/components/navbar"
+import { Hero } from "@/components/landing/hero"
+import { Features } from "@/components/landing/features"
+import { HowItWorks } from "@/components/landing/how-it-works"
+import { CTA } from "@/components/landing/cta"
+import { Footer } from "@/components/footer"
 
-export default function HomePage() {
+export default function LandingPage() {
   return (
-    <main className="relative">
-      <Navigation />
-      <HeroSection />
-      <ProductsSection />
-      <AboutSection />
-      <ResearchSection />
-      <TeamSection />
-      <FounderSection />
-      <ManifestoSection />
-      <ContactSection />
+    <main className="min-h-screen">
+      <Navbar />
+      <Hero />
+      <Features />
+      <HowItWorks />
+      <CTA />
       <Footer />
     </main>
   )

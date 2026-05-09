@@ -1,12 +1,12 @@
-import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
-import { Orbitron } from 'next/font/google'
+import type { Metadata, Viewport } from 'next'
+import { Inter, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { AuthProvider } from '@/lib/auth-context'
 import './globals.css'
 
-const geistSans = Geist({ 
+const inter = Inter({ 
   subsets: ["latin"],
-  variable: '--font-geist-sans'
+  variable: '--font-inter'
 })
 
 const geistMono = Geist_Mono({ 
@@ -14,30 +14,28 @@ const geistMono = Geist_Mono({
   variable: '--font-geist-mono'
 })
 
-const orbitron = Orbitron({ 
-  subsets: ["latin"],
-  variable: '--font-orbitron',
-  weight: ['400', '500', '600', '700', '800', '900']
-})
-
 export const metadata: Metadata = {
-  title: 'AURELIX SYSTEMS | Building Intelligent Systems',
-  description: 'AI-powered infrastructure for creativity, business, finance, and security. AURELIX SYSTEMS builds next-generation intelligent products.',
-  generator: 'v0.app',
-  keywords: ['AI', 'Artificial Intelligence', 'Machine Learning', 'Enterprise AI', 'AURELIX', 'Intelligent Systems'],
-  authors: [{ name: 'AURELIX SYSTEMS' }],
+  title: 'STAGEONE | AI Business Operating System',
+  description: 'Build and scale businesses with AI intelligence. Generate business analysis, growth strategies, website structures, chatbot designs, and automation plans.',
+  keywords: ['AI', 'Business', 'Automation', 'Strategy', 'SaaS', 'Operating System'],
+  authors: [{ name: 'STAGEONE' }],
+  creator: 'STAGEONE',
   openGraph: {
-    title: 'AURELIX SYSTEMS | Building Intelligent Systems',
-    description: 'AI-powered infrastructure for creativity, business, finance, and security.',
+    title: 'STAGEONE | AI Business Operating System',
+    description: 'Build and scale businesses with AI intelligence.',
     type: 'website',
   },
-  icons: {
-    icon: [
-      { url: '/favicon.ico' },
-      { url: '/icon.svg', type: 'image/svg+xml' },
-    ],
-    apple: '/apple-icon.png',
+  twitter: {
+    card: 'summary_large_image',
+    title: 'STAGEONE | AI Business Operating System',
+    description: 'Build and scale businesses with AI intelligence.',
   },
+}
+
+export const viewport: Viewport = {
+  themeColor: '#0d0d0d',
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({
@@ -46,8 +44,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable} bg-background`}>
-      <body className="font-sans antialiased min-h-screen bg-background text-foreground">
+    <html lang="en" className="dark bg-background">
+      <body className={`${inter.variable} ${geistMono.variable} font-sans antialiased`}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
