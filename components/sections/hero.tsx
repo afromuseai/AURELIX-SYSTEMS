@@ -10,6 +10,19 @@ import { ArrowRight, Sparkles } from 'lucide-react'
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/hero-bg.png"
+          alt=""
+          fill
+          className="object-cover object-center opacity-30"
+          priority
+        />
+        {/* Gradient overlay from bottom */}
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+      </div>
+
       {/* Background Grid */}
       <div className="absolute inset-0 bg-grid opacity-30" />
       
@@ -55,17 +68,25 @@ export function HeroSection() {
           <br />
           <span className="text-foreground">Intelligent Systems</span>
         </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-sm sm:text-base tracking-[0.3em] text-gold/70 uppercase mt-2 mb-4"
+        >
+          For a Better Future
+        </motion.p>
 
         {/* Subheading */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed"
+          className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed"
         >
-          AI-powered infrastructure for creativity, business, finance, and security.
+          AI-powered infrastructure for creativity, finance, business growth, and cybersecurity.
           <br className="hidden sm:block" />
-          <span className="text-gold/80">For a better future.</span>
+          <span className="text-foreground/80">AURELIX SYSTEMS develops next-generation AI platforms designed to empower creators, automate enterprises, strengthen digital ecosystems, and unlock scalable intelligence for the future.</span>
         </motion.p>
 
         {/* CTA Buttons */}
@@ -87,7 +108,7 @@ export function HeroSection() {
             href="#contact"
             className="flex items-center gap-2 px-8 py-4 bg-transparent text-foreground font-medium rounded-sm border border-gold/30 hover:border-gold/60 hover:bg-gold/5 transition-all duration-300"
           >
-            Join Waitlist
+            Join the Future
           </Link>
         </motion.div>
 

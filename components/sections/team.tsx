@@ -7,32 +7,32 @@ import { Linkedin, Twitter } from 'lucide-react'
 
 const team = [
   {
-    name: 'Joshua Adegoke',
+    name: 'Joshua Ametefe',
     role: 'Founder & CEO',
-    bio: 'Visionary technologist driving the future of AI systems.',
+    bio: 'Founder of AURELIX SYSTEMS, building intelligent platforms across creativity, finance, and cybersecurity.',
     image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-06%20at%2020.50.15-4o0HwutbOStb8OF5g8KARTLuXRZHNx.jpeg',
     initial: 'JA'
   },
   {
-    name: 'Director',
+    name: 'Elena Müller',
     role: 'Director of Operations',
     bio: 'Strategic leader overseeing company growth and partnerships.',
-    image: null,
-    initial: 'D'
+    image: '/images/team/director-of-operations.jpg',
+    initial: 'EM'
   },
   {
-    name: 'Lead Engineer',
+    name: 'Kenji Tanaka',
     role: 'Head of Engineering',
     bio: 'Building the technical foundation for our AI products.',
-    image: null,
-    initial: 'E'
+    image: '/images/team/head-of-engineering.jpg',
+    initial: 'KT'
   },
   {
-    name: 'AI Researcher',
+    name: 'Michael Kumi',
     role: 'Principal AI Researcher',
     bio: 'Pushing the boundaries of machine learning innovation.',
     image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-n4AHDIFtl1wvX5owcv0cO8ogAe61eI.png',
-    initial: 'R'
+    initial: 'MK'
   }
 ]
 

@@ -30,14 +30,14 @@ function GTProNav() {
             <span className="text-sm">Back to AURELIX</span>
           </Link>
           <div className="flex items-center gap-3">
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/8525df2b-d72c-4406-a831-154b96314b47-rb1k9QauZuEx5NAYJmD29t9zL68lDm.png"
-              alt="GTPro"
-              width={36}
-              height={36}
-              className="rounded-lg"
-            />
-            <span className="font-display text-xl tracking-wider text-gold-gradient">GTPro</span>
+            <div className="relative w-32 h-10">
+              <Image
+                src="/images/logos/gtpro-logo.png"
+                alt="GTPro"
+                fill
+                className="object-contain"
+              />
+            </div>
             <span className="text-xs text-emerald-400 px-2 py-0.5 bg-emerald-500/10 rounded">LIVE</span>
           </div>
           <Link 
@@ -120,11 +120,11 @@ function GTProHero() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1 }}
-              className="relative w-32 h-32 mx-auto mb-8"
+              className="relative w-80 h-28 mx-auto mb-8"
             >
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/8525df2b-d72c-4406-a831-154b96314b47-rb1k9QauZuEx5NAYJmD29t9zL68lDm.png"
-                alt="GTPro"
+                src="/images/logos/gtpro-logo.png"
+                alt="GTPro - Global Trade Intelligence"
                 fill
                 className="object-contain"
               />
@@ -141,12 +141,6 @@ function GTProHero() {
             <span className="inline-block px-4 py-1.5 text-xs font-medium tracking-[0.2em] text-emerald-400 bg-emerald-500/10 rounded-full border border-emerald-500/20 mb-6">
               INSTITUTIONAL GRADE
             </span>
-            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-wider">
-              <span className="text-gold-gradient">GTPro</span>
-            </h1>
-            <p className="font-display text-xl sm:text-2xl tracking-wide text-foreground/80 mt-4">
-              Global Trade Intelligence
-            </p>
           </motion.div>
 
           <motion.p

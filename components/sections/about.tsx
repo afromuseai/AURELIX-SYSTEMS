@@ -8,23 +8,23 @@ import { Target, Globe, Lightbulb, Rocket } from 'lucide-react'
 const values = [
   {
     icon: Target,
-    title: 'Vision',
-    description: 'Building next-generation AI infrastructure that empowers creators, businesses, and institutions worldwide.'
+    title: 'Mission',
+    description: 'Building intelligent systems that empower creativity, accelerate business growth, strengthen digital security, and redefine human-technology interaction.'
   },
   {
     icon: Globe,
-    title: 'Global Impact',
-    description: 'Focused on Africa and global innovation, bringing world-class AI solutions to emerging markets.'
+    title: 'Vision',
+    description: 'Becoming a global leader in intelligent infrastructure by building advanced AI ecosystems that shape the future of creativity, finance, and cybersecurity.'
   },
   {
     icon: Lightbulb,
     title: 'Innovation',
-    description: 'Pioneering breakthrough technologies in machine learning, automation, and intelligent systems.'
+    description: 'Developing AI-powered infrastructure that transforms ideas into scalable systems, combining automation, intelligence, and innovation into unified experiences.'
   },
   {
     icon: Rocket,
-    title: 'Excellence',
-    description: 'Committed to delivering enterprise-grade products that set new standards in the industry.'
+    title: 'Future',
+    description: 'Technology that will not simply assist people — it will collaborate, adapt, and evolve alongside them.'
   }
 ]
 
@@ -57,16 +57,24 @@ export function AboutSection() {
             </SectionReveal>
 
             <SectionReveal delay={0.2}>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                AURELIX SYSTEMS is at the forefront of artificial intelligence innovation. 
-                We build intelligent products that transform industries across creativity, 
-                finance, business infrastructure, and cybersecurity.
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                AURELIX SYSTEMS is an AI systems company focused on building intelligent infrastructure 
+                across creativity, finance, enterprise automation, and cybersecurity.
               </p>
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                Our mission is to democratize access to powerful AI tools, with a special 
-                focus on emerging markets and global innovation. We believe in building 
-                technology that creates real value for people and businesses everywhere.
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Our mission is to create scalable systems that empower individuals, businesses, and 
+                digital ecosystems through advanced artificial intelligence and automation technologies.
               </p>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                We believe the future belongs to intelligent platforms capable of transforming ideas 
+                into execution, simplifying complexity, and unlocking new possibilities through adaptive technology.
+              </p>
+              <div className="p-4 border-l-2 border-gold/40 bg-gold/5 rounded-r-lg mb-8">
+                <p className="text-sm text-foreground/90 italic leading-relaxed">
+                  {"\"Intelligence should not only assist — it should evolve, adapt, and scale with human ambition.\""}
+                </p>
+                <p className="text-xs text-gold/70 mt-2 tracking-wider">— AURELIX CORE PRINCIPLE</p>
+              </div>
             </SectionReveal>
 
             <SectionReveal delay={0.4}>

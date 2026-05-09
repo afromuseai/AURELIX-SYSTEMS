@@ -31,7 +31,7 @@ function AfroMuseNav() {
           </Link>
           <div className="flex items-center gap-2">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-07%20at%2010.18.37-sNIpWzBPHNGnR0ifjyfLQDDLzZ3PyE.jpeg"
+              src="/images/logos/afromuse-logo.jpg"
               alt="AfroMuse AI"
               width={40}
               height={40}
@@ -98,7 +98,7 @@ function AfroMuseHero() {
             className="relative w-32 h-32 mx-auto mb-8"
           >
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-07%20at%2010.18.37-sNIpWzBPHNGnR0ifjyfLQDDLzZ3PyE.jpeg"
+              src="/images/logos/afromuse-logo.jpg"
               alt="AfroMuse AI"
               fill
               className="object-contain rounded-2xl"
